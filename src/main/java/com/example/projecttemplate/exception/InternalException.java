@@ -1,6 +1,6 @@
 package com.example.projecttemplate.exception;
 
-import com.guigu.payment.enums.ExceptionEnum;
+import com.example.projecttemplate.enums.ExceptionEnum;
 
 /**
  * @author xushengjie

@@ -23,7 +23,7 @@ public class Knife4jConfiguration {
 				.apiInfo(new ApiInfoBuilder()
 						.title("project-template")
 						.description("接口文档")
-						.termsOfServiceUrl("http://localhost:8090/api/test")
+						.termsOfServiceUrl("http://localhost:8091/api/test")
 						.version("1.0")
 						.build())
 				//分组名称

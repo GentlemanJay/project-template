@@ -1,9 +1,9 @@
 package com.example.projecttemplate.exception.handler;
 
-import com.guigu.payment.enums.ExceptionEnum;
-import com.guigu.payment.exception.CustomException;
-import com.guigu.payment.exception.InternalException;
-import com.guigu.payment.vo.Result;
+import com.example.projecttemplate.enums.ExceptionEnum;
+import com.example.projecttemplate.exception.CustomException;
+import com.example.projecttemplate.exception.InternalException;
+import com.example.projecttemplate.vo.Result;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;

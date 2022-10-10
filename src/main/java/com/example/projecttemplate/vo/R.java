@@ -1,6 +1,6 @@
 package com.example.projecttemplate.vo;
 
-import com.guigu.payment.enums.ResultEnum;
+import com.example.projecttemplate.enums.ResultEnum;
 import lombok.Data;
 import lombok.experimental.Accessors;
 
