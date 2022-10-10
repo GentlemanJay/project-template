@@ -1,6 +1,7 @@
 package com.example.projecttemplate.exception.handler;
 
 import com.example.projecttemplate.enums.ExceptionEnum;
+import com.example.projecttemplate.enums.ResultEnum;
 import com.example.projecttemplate.exception.CustomException;
 import com.example.projecttemplate.exception.InternalException;
 import com.example.projecttemplate.vo.Result;
@@ -39,19 +40,17 @@ public class GlobalExceptionHandler {
 
 
 	@ExceptionHandler(InternalException.class)
-	@ResponseStatus(HttpStatus.OK)
 	public Result<String> handleInternalException(InternalException e)
 	{
 		log.error(e.getMessage(), e);
-		return Result.error(1008, e.getMessage());
+		return Result.error(ResultEnum.ERROR.getCode(), e.getMessage());
 	}
 
 
 	@ExceptionHandler(CustomException.class)
-	@ResponseStatus(HttpStatus.OK)
 	public Result<String> handleCustomException(CustomException e)
 	{
 		log.error(e.getMessage(), e);
-		return Result.error(1007, e.getMessage());
+		return Result.error(ResultEnum.ERROR.getCode(), e.getMessage());
 	}
 }

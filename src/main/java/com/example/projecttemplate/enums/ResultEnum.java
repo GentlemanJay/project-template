@@ -18,7 +18,7 @@ public enum ResultEnum {
     /**访问失败
      *
      */
-    ERROR(0, "失败");
+    ERROR(500, "失败");
 
     /**
      * 响应码
