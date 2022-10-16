@@ -33,7 +33,9 @@ public class Result<T> implements Serializable {
 
     public static <T> Result<T> success(T object) {
         Result<T> r = new Result<>();
-        r.data = object;
+        if (object != null) {
+            r.data = object;
+        }
         r.code = ResultEnum.SUCCESS.getCode();
         r.msg = ResultEnum.SUCCESS.getDesc();
         return r;
