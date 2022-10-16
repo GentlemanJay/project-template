@@ -32,10 +32,10 @@ public class GlobalExceptionHandler {
 		log.error(ex.getMessage());
 
 		if(ex.getMessage().contains("Duplicate entry")){
-			return Result.error(ExceptionEnum.DATA_DUPLICATE.getCode(), ex.getMessage());
+			return Result.error(ex.getMessage());
 		}
 
-		return Result.error(ExceptionEnum.DATA_INVALID.getCode(), ex.getMessage());
+		return Result.error(ex.getMessage());
 	}
 
 
@@ -43,7 +43,7 @@ public class GlobalExceptionHandler {
 	public Result<String> handleInternalException(InternalException e)
 	{
 		log.error(e.getMessage(), e);
-		return Result.error(ResultEnum.ERROR.getCode(), e.getMessage());
+		return Result.error(e.getMessage());
 	}
 
 
@@ -51,6 +51,6 @@ public class GlobalExceptionHandler {
 	public Result<String> handleCustomException(CustomException e)
 	{
 		log.error(e.getMessage(), e);
-		return Result.error(ResultEnum.ERROR.getCode(), e.getMessage());
+		return Result.error(e.getMessage());
 	}
 }
